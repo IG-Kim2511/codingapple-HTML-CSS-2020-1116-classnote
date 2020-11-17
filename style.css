@@ -1,29 +1,32 @@
 /* ● */
 
-/* 🦄05 박스 디자인-margin auto 가운데정렬 
-
-(1)
-display: block;
-margin-left: auto;
-margin-right: auto;
-
-(2)
-margin: auto; 만 써도 됨
-
-(3)
-display:block 지워도 됨. div,h1,p 태그등등은 block을 내장하고있음
-*/
+/* 🦄05 박스 디자인-margin auto 가운데정렬 */
 
 .description {
   width: 400px;
   background-color: grey;
-  /* (1) */
+  /* (1) 박스 가운데 정렬*/
   display: block;
   margin-left: auto;
   margin-right: auto;
-  /* (2) */
-  margin: auto;
 
+/*   
+  margin auto 뜻 : 자신이 가지고있는 마진을 모두 쓴다는 의미
+
+  margin : 0 auto 👉왼쪽,오른쪽의 마진을 모두 쓰니까, 가운데 정렬이 됨
+
+  margin-left:auto 👉 왼쪽에만 auto붙어서 왼쪽 마진 모두 씀 👉 오른쪽끝으로 붙음
+  */
+
+  /* (1)-2
+  margin: auto; */
+
+  /* (1)-3 */
+
+  /* (1)-4
+  display:block 지워도 됨. div,h1,p 태그등등은 block을 내장하고있음 */
+
+  /* (2) */
   border-radius: 5px;
 }
 
