@@ -159,3 +159,57 @@ default값 : baseline  👉 아무거나 로 바꾸면 정상적으로 박스가
   /* (1)-4   */
   vertical-align: top;
 }
+
+
+/* 🦄08 float. 박스 안 img 100% 딱 맞추기 (레이아웃 만들기 숙제) */
+
+/* (1) float */
+
+/* (2) 박스 안 img 100% 딱 맞추기 :           
+img 넣었는데 박스보다 크거나 작을 때, 
+width="100%"를 html에 직접 박아넣음 (css에 width설정 안에서 100%가 되는 현상) 
+👉박스안에 100% 딱맞게 됨 */
+
+/* (3) B: <h4>의 default margin때문에 <p>가 밑으로 내려가 있는 상황 👉 margin: 0을 줌  */
+
+/* (4) float이후의 div에 clear: both; */
+
+.blog-container{
+  width: 70%;
+  height: 200px;
+  background: yellowgreen;
+  /* (1) float */
+  float: left;
+}
+
+.blog-image{
+  /* (2) */
+  width:30%;
+  height: 200px;
+  background: burlywood;
+  /* (1)  */
+  float: left;
+}
+
+.blog-profile{
+  float: left;
+}
+
+/* (3)  <h4>의 default margin때문에 <p>가 밑으로 내려가 있는 상황 */
+.blog-profile h4 {
+  margin: 0px;
+}
+
+.blog-pic{
+  float: left;
+}
+
+.blog-title{
+  /* (4) clear: both; */
+  clear: both;
+}
+
+/* 가운데 정렬 */
+.container8{
+  margin: auto;
+}
