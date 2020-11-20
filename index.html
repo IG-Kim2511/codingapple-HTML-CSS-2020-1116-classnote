@@ -6,7 +6,9 @@
     <title></title>
 
     <link rel="stylesheet" href="style.css" />
+   
     <script src="script.js" defer></script>
+
   </head>
   <body>
     <div>
@@ -24,6 +26,8 @@
         <li></li>
         <li></li>
       </ol>
+      <br>
+      <p>br태그는 자중해서 쓰기. margin으로 사용하는게 좋은 습관</p>
     </div>
 
     <div>
@@ -162,16 +166,42 @@
       🦄11 Position
 
       <div class="background11">
-        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, omnis! Asperiores repellat suscipit distinctio, </p>  
-        <button>button</button>
+        <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, omnis! Asperiores repellat suscipit ores repellat suscipit distinctio, </p>  
+        <button class="button">button</button>
         <!-- (2) -->
-        <button class="position1">relative</button>
+        <button class="button position1">relative</button>
         <!-- (3) -->
-        <button class="position2">10강 fixed</button>
+        <button class="button position2">11강 fixed</button>
         <!-- (4) (5)-->
-        <button class="position3">absolute</button>
-
+        <button class="button position3">absolute</button>
       </div>
+    </div>
+
+    <div class="c12">
+      🦄12 겹치는 박스만들기& box-sizing (Position 숙제 & 반응형 width & box-sizing)
+      <div class="box">
+        <h4>겹치는 박스만들기</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates sit dignissimos ipsum laboriosam praesentium..</p>
+      </div>
+      <br>
+      <!-- (3) padding을 줌, 
+        둘다 같은 width인데 박스 크기가 달라짐
+        padding과 border의 크기는 box-size에 적용이 안됨. 
+        👉 box-size 똑같이 코딩해도, padding, border때문에 예상외로  다른 크기가 되는 실수가 많음
+        -->
+      <div class="box" style="padding: 100px;">
+        <h4>겹치는 박스만들기</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates sit dignissimos ipsum laboriosam praesentium..</p>
+      </div>
+      <br>
+      <!-- (3) box-sizing: border-box;
+        padding, border크기도 전부 합쳐서 박스 크기 적용시킴  -->
+      <div class="box"  style="padding: 100px; box-sizing: border-box;" >
+        <h4>겹치는 박스만들기</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit voluptates sit dignissimos ipsum laboriosam praesentium..</p>
+      </div>
+
+
     </div>
 
   </body>
