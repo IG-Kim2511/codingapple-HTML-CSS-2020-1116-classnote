@@ -421,16 +421,16 @@ css시작할때 기본으로 넣고 시작함
 https://github.com/necolas/normalize.css/blob/master/normalize.css
 */
 
-.c12 .box {
+.c12 .box{  
   /* (2)max-width  */
   max-width: 600px;
   width: 80%;
   margin: auto;
-
+  
   text-align: center;
   background-color: violet;
 
-  /* (1)겹치는 박스만들기  */
+/* (1)겹치는 박스만들기  */
   position: relative;
   top: -50px;
 }
@@ -439,34 +439,34 @@ https://github.com/necolas/normalize.css/blob/master/normalize.css
     둘다 같은 width인데 박스 크기가 달라짐
     padding과 border의 크기는 box-size에 적용이 안됨. 
     👉 box-size 똑같이 코딩해도, padding, border때문에 예상외로  다른 크기가 되는 실수가 많음 */
-.padding12 {
+.padding12{  
   padding: 30px;
 }
 
 /* (3)-3 box-sizing: border-box;
  padding, border크기도 전부 합쳐서 박스 크기 적용시킴 */
-.border-box12 {
-  padding: 30px;
+.border-box12{
+  padding: 30px; 
   box-sizing: border-box;
 }
 
 /*  🦄13 form & input 
-👉html */
+👉html*/
 
-.c13 form {
-  padding: 10px;
+.c13 form{
+  padding: 10px;  
 }
 
-/* input [type=text] 
+/* input[type=text] 
 input의 type속성이 email(text, submit...etc)인 요소만 찾아서 스타일을 줄 수 있습니다. (class대신 사용) */
 
-input [type="text"] {
+input[type=text] {
   padding: 30px;
   font-size: 20px;
   border-radius: 5px;
   border: 1px solid red;
+
 }
 
 /* type속성없이, 모든 input 스타일링은 하지말아야 할것 */
-input {
-}
+input{ }
