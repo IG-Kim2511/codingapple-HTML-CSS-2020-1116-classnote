@@ -246,30 +246,29 @@ B: float로 인해, 다음 div의 margin이 float적용된 div를 무시하고 �
   background: blue;
 }
 
-
 /* (2) display: inline-block; : 수평정렬 */
 /* (3)-2 li-inline안의 모든 태그*/
-.li-inline li{
+.li-inline li {
   display: inline-block;
   width: 100px;
   text-align: center;
 }
 /* (3)-3 li-inline안 바로 밑의 태그*/
-.li-inline>li{
+.li-inline > li {
   background-color: yellowgreen;
 }
 
 /* (3)-4 바로 밑이 아니면 적용 안됨 */
-.li-inline>span{
+.li-inline > span {
   background-color: red;
 }
 
 /* (4) class 2개 동시적용 */
 .blue {
-  color : blue
+  color: blue;
 }
 
-.navbar{
+.navbar {
   width: 800px;
   margin: auto;
   margin-bottom: 20px;
@@ -277,17 +276,16 @@ B: float로 인해, 다음 div의 margin이 float적용된 div를 무시하고 �
 }
 
 /* (5) a링크 밑줄 제거  text-decoration: none; */
-.li-inline a{
+.li-inline a {
   text-decoration: none;
 }
 
 /* (6) 보라색링크(visited link) 색깔 수정 */
-.li-inline a:visited{
+.li-inline a:visited {
   color: crimson;
 }
 
-
-/* 🦄10 background의 모든 것과 margin 버그 */
+/* 🦄10 background & margin 버그 */
 /* (1)background-size
 100% : 사이즈 줄였을때 이미지 하단에공백이 생김
 cover : 가장 많이 쓰임, 공백없이 background 꽉 채움
@@ -303,11 +301,16 @@ margin 두개가 만나면 (박스들의 테두리가 만나면) 둘이 합쳐�
 정확히 말하면 둘 중에 더 큰 마진을 하나만 적용하게 되는 것이지요. 
 */
 
-.background10{
+/* (3)-2 A: 
+1w. 부모태그에 padding을 넣는 방식으로 코딩하기
+
+2w. 부모태그에 padding을 1px라도 준 후, 자식태그에 margin넣기 */
+
+.background10 {
   width: 100%;
   height: 300px;
   background: url(./images/etc/background.jpg);
-  
+
   /* (1) */
   background-size: cover;
   /* background-size: 100%; */
@@ -318,25 +321,80 @@ margin 두개가 만나면 (박스들의 테두리가 만나면) 둘이 합쳐�
   background-position: center;
 }
 
-.text10{
+.text10 {
   /* (3) margin 버그  */
   margin-top: 100px;
 }
 
-/* (3)-2 A: 
-1w. 부모태그에 padding을 넣는 방식으로 코딩하기
-2w. 부모태그에 padding을 1px라도 준 후, 자식태그에 margin넣기 */
-
-.background10_2{
+.background10_2 {
   width: 100%;
   height: 300px;
   background: url(./images/etc/background2.jpg);
 
-  /* (3)-2-1w */
- padding-top: 100px;
+  /* (3)-2-1w margin 버그 해결법*/
+  padding-top: 100px;
 }
-.text10_2{
+
+.text10_2 {
   /* (3)-2-2w */
   margin-top: 200px;
+}
 
+/* 🦄11 Position */
+
+/* (2) position: relative
+원래위치에서부터 좌표변경 top,bottom,left,right */
+
+/* (3)fixed */
+
+/* (4)absolute 
+기준점으로 삼을 부모div에 position:relative 넣고, 여기에 absolute 넣으면, 부모를 기준으로 top,bottom,left,right 적용 */
+
+/* (5) absolute의 가운데 정렬 공식
+B: absolute사용하면 가운데정렬 일반공식이 풀림. 이때 사용함
+*/
+
+.background11 {
+  width: 100%;
+  height: 300px;
+  background: url(./images/etc/background.jpg);
+  padding-top: 100px;
+
+  /* (4) */
+  position: relative;
+}
+
+.c11 button {
+  padding: 10px;
+  font-size: 18px;
+  background-color: orange;
+
+  /* 가운데정렬 일반공식 */
+  display: block;
+  margin: auto;
+}
+
+.position1 {
+  /* (2) relative  */
+  position: relative;
+  left: 30px;
+}
+
+.position2 {
+  /* (3)fixed */
+  position: fixed;
+  top: 0px;
+  left: 30px;
+}
+
+.position3 {
+  /* (4)⭐absolute */
+  position: absolute;
+  bottom: 30px;
+
+  /* (5) absolute의 가운데 정렬 공식*/
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
 }
