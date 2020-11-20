@@ -285,6 +285,12 @@ B: float로 인해, 다음 div의 margin이 float적용된 div를 무시하고 �
   color: crimson;
 }
 
+/* (7) text-align : left, right, center */
+
+.text-align {
+  text-align: center;
+}
+
 /* 🦄10 background & margin 버그 */
 /* (1)background-size
 100% : 사이즈 줄였을때 이미지 하단에공백이 생김
@@ -455,7 +461,7 @@ https://github.com/necolas/normalize.css/blob/master/normalize.css
 
 .c13 form {
   padding: 10px;
-  }
+}
 
 /* input[type=text] 
 input의 type속성이 email(text, submit...etc)인 요소만 찾아서 스타일을 줄 수 있습니다. (class대신 사용) */
@@ -473,8 +479,14 @@ input {
 
 /*🦄14 form & input 숙제: Contact Us 섹션 만들기 */
 
-/* ,콤마 : 동시에 여러개의 selector 적용*/
-.c14 div,input,textarea{
+/* ,콤마 : 동시에 여러개의 selector 적용
+
+콤마쓸때 조심할것 : 셀렉터 전체를 써야함. 
+.c14  div, input ⊗  */
+
+.c14 div,
+.c14 input,
+.c14 textarea {
   box-sizing: border-box;
 }
 
@@ -482,20 +494,21 @@ input {
 👉html
 */
 
-.c15 table{
+.c15 table {
   /* padding: 10px; */
   /* height: 50px;
   width: 50px; */
 }
 
-.c15 th,td {
-  border: 1px solid violet;
+th,
+td {
+  border: 1px solid green;
   padding: 20px;
   text-align: center;
 }
 
 /* (2) */
-.border-collapse{
+.border-collapse {
   border-collapse: collapse;
 }
 
@@ -505,4 +518,40 @@ input {
 }
 .vertical-align2 {
   vertical-align: bottom;
+}
+
+/* 🦄16 Table에서 width (Table 레이아웃 숙제 : Cart 페이지 만들기) */
+
+/* (1) ⭐반응형을 고려한다면 상위 div에서 폭을 결정하는게 좋습니다. container 박스에 최대폭과 폭을 설정해주면 되겠습니다 */
+
+.c16 .container {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+}
+/*  width: 100%;  : 반응형*/
+.c16 table {
+  background: lightgrey;
+  width: 100%;
+}
+
+/* (3) 테두리 색상은 밑에만 넣을 수도 있습니다.   */
+
+.c16 td {
+  border-bottom: 5px solid yellow;
+}
+
+/*(4) 셀 블록마다 width를 설정해주는게 좋습니다
+thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
+
+50%+30%+20% = 100% */
+
+.c16-1 {
+  width: 50%;
+}
+.c16-2 {
+  width: 30%;
+}
+.c16-3 {
+  width: 20%;
 }
