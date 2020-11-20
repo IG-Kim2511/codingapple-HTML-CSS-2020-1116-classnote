@@ -412,9 +412,11 @@ relative넣고 -px 로 박스를 위로 올림 */
 
 /* (2)max-width 박스가 늘어나는 한계 지정 */
 
-/* (3)box-sizing: border-box; 
+/* (3) box-sizing: border-box; 
+👉capture정리
+
 css시작할때 기본으로 넣고 시작함
-👉html
+
 👉normalize.css
 https://github.com/necolas/normalize.css/blob/master/normalize.css
 */
@@ -423,13 +425,27 @@ https://github.com/necolas/normalize.css/blob/master/normalize.css
   /* (2)max-width  */
   max-width: 600px;
   width: 80%;
-
   margin: auto;
-  padding: 20px;
+  
   text-align: center;
   background-color: violet;
 
 /* (1)겹치는 박스만들기  */
   position: relative;
   top: -50px;
+}
+
+/* (3)-2 padding을 줌, 
+    둘다 같은 width인데 박스 크기가 달라짐
+    padding과 border의 크기는 box-size에 적용이 안됨. 
+    👉 box-size 똑같이 코딩해도, padding, border때문에 예상외로  다른 크기가 되는 실수가 많음 */
+.padding12{  
+  padding: 30px;
+}
+
+/* (3)-3 box-sizing: border-box;
+ padding, border크기도 전부 합쳐서 박스 크기 적용시킴 */
+.border-box12{
+  padding: 30px; 
+  box-sizing: border-box;
 }
