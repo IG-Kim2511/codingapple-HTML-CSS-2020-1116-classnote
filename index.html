@@ -271,8 +271,74 @@
           </div>
         </form>
       </div>
-
     </div>
+
+    <div class="c15">
+      🦄15 Table 레이아웃과 vertical-align속성
+
+      <!-- (1) table은 div안에 만드는게 좋음 
+      table,tbody 반드시 나눠야하는것은 아니지만, css,js추가할때 편함
+
+      th: 굵은 글씨 : 제목
+      td: 일반  -->    
+
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th> th: 굵은 글씨</th>
+              <th> th: 굵은 글씨</th>      
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td> td: 일반</td>
+              <td> td: 일반</td>        
+            </tr>
+            <tr>
+              <td> td: 일반</td>
+              <td> td: 일반</td>         
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+
+        <!-- (2) border사이의 나쁜간격 없애기
+          border-collapse: collapse;
+        👉table태그에서 필수    -->
+
+        <table class="border-collapse">    
+          <tbody>
+            <tr>
+              <td> td: 일반</td>
+              <td> td: 일반</td>        
+            </tr>        
+          </tbody>
+        </table>
+      </div>
+
+        <!-- (3) vertical-align: middle;
+        inline 요소들을 나란히 배치하면 상하정렬이 이상한 경우가 있습니다. 
+        특히 이미지와 글을 나란히 배치했을 때 서로 높이가 맞지 않는 경우가 많은데 ,이럴 때 쓰는 속성입니다. 
+        top, middle, bottom , px단위로 줄 수도 있습니다.  -->
+
+      <div> 
+        <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="55" class="vertical-align"> 
+        글씨와 이미지가 같이 있는 예제 vertical-align: middle;
+
+        <br>
+
+        <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="55" class="vertical-align2"> 
+        글씨와 이미지가 같이 있는 예제  vertical-align: bottom;
+      </div>
+    </div>
+
+
+
+  </div>
+
+
 
   </body>
 </html>

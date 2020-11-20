@@ -477,3 +477,32 @@ input {
 .c14 div,input,textarea{
   box-sizing: border-box;
 }
+
+/* 🦄15 Table 레이아웃과 vertical-align속성
+👉html
+*/
+
+.c15 table{
+  /* padding: 10px; */
+  /* height: 50px;
+  width: 50px; */
+}
+
+.c15 th,td {
+  border: 1px solid violet;
+  padding: 20px;
+  text-align: center;
+}
+
+/* (2) */
+.border-collapse{
+  border-collapse: collapse;
+}
+
+/* (3) */
+.vertical-align {
+  vertical-align: middle;
+}
+.vertical-align2 {
+  vertical-align: bottom;
+}
