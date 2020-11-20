@@ -352,6 +352,12 @@ margin 두개가 만나면 (박스들의 테두리가 만나면) 둘이 합쳐�
 
 /* (5) absolute의 가운데 정렬 공식
 B: absolute사용하면 가운데정렬 일반공식이 풀림. 이때 사용함
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: ~~~ px;
 */
 
 .background11 {
