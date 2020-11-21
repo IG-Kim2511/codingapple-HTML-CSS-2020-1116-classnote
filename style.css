@@ -463,7 +463,7 @@ https://github.com/necolas/normalize.css/blob/master/normalize.css
   padding: 10px;
 }
 
-/* input[type=text] 
+/* (1) input[type=text] 
 input의 type속성이 email(text, submit...etc)인 요소만 찾아서 스타일을 줄 수 있습니다. (class대신 사용) */
 
 .c13 input[type="text"] {
@@ -479,8 +479,7 @@ input {
 
 /*🦄14 form & input 숙제: Contact Us 섹션 만들기 */
 
-/* ,콤마 : 동시에 여러개의 selector 적용
-
+/*(2) ,콤마 : 동시에 여러개의 selector 적용
 콤마쓸때 조심할것 : 셀렉터 전체를 써야함. 
 .c14  div, input ⊗  */
 
@@ -510,6 +509,14 @@ td {
 /* (2) */
 .border-collapse {
   border-collapse: collapse;
+}
+
+/* (2)-2 */
+.border-collapse2 {
+  border-collapse : collapse;
+  border-radius : 7px;
+  border-style : hidden;
+  box-shadow : 0 0 0 1px #666;
 }
 
 /* (3) */
@@ -554,4 +561,65 @@ thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
 }
 .c16-3 {
   width: 20%;
+}
+
+/*🦄17 pseudo-class. CSS 아키텍처 */
+
+
+.btn {
+  padding : 10px;
+  font-size : 18px;
+  border : none;
+  border-radius : 5px;
+  cursor : pointer;
+  width: 100px;
+}
+
+/* (1) Pseudo-class */
+/* hover👉focus👉activ 순서로 코딩하면 에러가 없음 */
+
+.btn:hover {
+  background : violet; /*마우스를 갖다댔을 때*/
+}
+.btn:focus {
+  background : red; /*커서가 찍혀있을 때*/
+}
+.btn:active {
+  background : green; /*누르고 있을 때*/
+}
+
+/* (1)-2 Pseudo-class for a태그 */
+.a-link:link {
+  color : yellow; /*방문 전 a 링크*/
+}
+.a-link:visited {
+  color : rgb(22, 185, 35); /*방문 후 a 링크*/
+}
+
+/* (2) 밑줄삭제 */
+.text-decoration{
+  text-decoration: none;
+}
+
+
+/* (3) css아키텍쳐 : 클래스 재사용이 가능하게 구분해서 코딩하기  */
+
+/* 기본 코딩 : 모든 버튼이 공유하는 디자인*/
+.btn2 {
+  padding : 10px;
+  font-size : 18px;
+  border : none;
+  border-radius : 5px;
+  cursor : pointer;
+  width: 100px;
+}
+/* 추가 코딩 : 각 버튼이 다른 디자인 */
+.btn-blue {
+  background-color : blue;
+  color : white;
+} 
+/* 추가 코딩 : 각 버튼이 다른 디자인 */
+.btn-red {
+  background-color : red;
+  color : white;
 }

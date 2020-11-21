@@ -17,10 +17,22 @@
       <img src="/images/etc/iu(1).jpg" alt="" />
       <p></p>
       <h1></h1>
+   
       <a href="http://naver.com" target="_blank">
         <img src="/images/etc/iu(2).jpg" alt="" />a
       </a>
+
+      <br>
       <button>button</button>
+
+      <br>
+      <!--  --> a태그: href, target
+      <button><a href="#" target="_blank">button_a</a></button>
+
+      <br>
+      <!--  --> a태그: href를 없애면 버튼 클릭해도 제자리
+      <button><a>button_a</a></button>
+  
 
       <ol>
         <li></li>
@@ -204,6 +216,8 @@
         action : '전송할 경로': 서버개발자 가 사용함 
         <form action="">
           <!-- input 자주 쓰이는 것들-->
+
+          <!-- (1) --> 
           text
           <input type="text"> 
 
@@ -256,6 +270,7 @@
 
     <div class="c14">
       🦄14 form & input 숙제: Contact Us 섹션 만들기 
+
       <div>
         <form action="">
           <div>
@@ -263,24 +278,30 @@
             <textarea rows="3"></textarea>
           </div>
 
-          <!-- for="작명" id="작명": label(글씨)눌러도, input이 선택됨 -->
+          <!--(1) -->
+          for="작명" id="작명": label(글씨)눌러도, input이 선택됨 
          
           <div>
             <input type="checkbox" id="작명">
             <label for="작명">label글씨</label>
           </div>
         </form>
+
+        <!-- (3) -->
+        input 필수 속성들 : border, font-size, padding, width
+        <div></div>
       </div>
     </div>
 
     <div class="c15">
       🦄15 Table 레이아웃과 vertical-align속성
 
-      <!-- (1) table은 div안에 만드는게 좋음 
+      <!-- (1)  --> 
+      table은 div안에 만드는게 좋음 
       table,tbody 반드시 나눠야하는것은 아니지만, css,js추가할때 편함
 
       th: 굵은 글씨 : 제목
-      td: 일반  -->    
+      td: 일반    
 
       <div>
         <table>
@@ -304,9 +325,10 @@
 
         <br>
 
-        <!-- (2) border사이의 나쁜간격 없애기
-          border-collapse: collapse;
-        👉table태그에서 필수    -->
+        <!-- (2)   -->
+        border사이의 나쁜간격 없애기
+         border-collapse: collapse;
+        👉table태그에서 필수  
 
         <table class="border-collapse">    
           <tbody>
@@ -318,10 +340,26 @@
         </table>
       </div>
 
-        <!-- (3) vertical-align: middle;
+      <!-- (2)-2  -->
+      border-collapse 속성을 table태그에 적용하면 border-radius가 안먹는 경우가 있습니다. 그럴 때 사용할만한 방법들을 소개해드립니다. 
+
+      👉border그림자 만들고, border는 숨김
+
+      <table class="border-collapse2">    
+        <tbody>
+          <tr>
+            <td> td: 일반</td>
+            <td> td: 일반</td>        
+          </tr>        
+        </tbody>
+      </table>
+    </div>
+
+        <!-- (3)-->
+        vertical-align: middle;
         inline 요소들을 나란히 배치하면 상하정렬이 이상한 경우가 있습니다. 
         특히 이미지와 글을 나란히 배치했을 때 서로 높이가 맞지 않는 경우가 많은데 ,이럴 때 쓰는 속성입니다. 
-        top, middle, bottom , px단위로 줄 수도 있습니다.  -->
+        top, middle, bottom , px단위로 줄 수도 있습니다.  
 
       <div> 
         <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="55" class="vertical-align"> 
@@ -362,11 +400,28 @@
             </tr>
           </tbody>
         </table>
-      </div>
-      
+      </div>      
+    </div>
 
+    <div class="c17">
+      🦄17 pseudo-class. CSS 아키텍처
 
+      <br>
+      <!-- (1) --> Pseudo-class
+      <button class="btn btn-blue">btn</button>
 
+      <br>
+      <!-- (1)-2 --> Pseudo-class for a태그
+     <a class="btn a-link" href="#">a-link</a>
+
+      <br>
+      <!-- (2) --> 밑줄삭제
+     <a class="btn a-link text-decoration" href="#">a-link</a>
+
+     <br>
+     <!-- (3)  --> css아키텍쳐
+     <button class="btn2 btn-blue">btn2</button>
+     <button class="btn2 btn-red">btn2</button>
 
     </div>
 
