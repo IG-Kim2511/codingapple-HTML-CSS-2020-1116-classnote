@@ -513,10 +513,10 @@ td {
 
 /* (2)-2 */
 .border-collapse2 {
-  border-collapse : collapse;
-  border-radius : 7px;
-  border-style : hidden;
-  box-shadow : 0 0 0 1px #666;
+  border-collapse: collapse;
+  border-radius: 7px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px #666;
 }
 
 /* (3) */
@@ -565,13 +565,12 @@ thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
 
 /*🦄17 pseudo-class. CSS 아키텍처 */
 
-
 .btn {
-  padding : 10px;
-  font-size : 18px;
-  border : none;
-  border-radius : 5px;
-  cursor : pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   width: 100px;
 }
 
@@ -579,47 +578,91 @@ thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
 /* hover👉focus👉activ 순서로 코딩하면 에러가 없음 */
 
 .btn:hover {
-  background : violet; /*마우스를 갖다댔을 때*/
+  background: violet; /*마우스를 갖다댔을 때*/
 }
 .btn:focus {
-  background : red; /*커서가 찍혀있을 때*/
+  background: red; /*커서가 찍혀있을 때*/
 }
 .btn:active {
-  background : green; /*누르고 있을 때*/
+  background: green; /*누르고 있을 때*/
 }
 
 /* (1)-2 Pseudo-class for a태그 */
 .a-link:link {
-  color : yellow; /*방문 전 a 링크*/
+  color: yellow; /*방문 전 a 링크*/
 }
 .a-link:visited {
-  color : rgb(22, 185, 35); /*방문 후 a 링크*/
+  color: rgb(22, 185, 35); /*방문 후 a 링크*/
 }
 
 /* (2) 밑줄삭제 */
-.text-decoration{
+.text-decoration {
   text-decoration: none;
 }
-
 
 /* (3) css아키텍쳐 : 클래스 재사용이 가능하게 구분해서 코딩하기  */
 
 /* 기본 코딩 : 모든 버튼이 공유하는 디자인*/
 .btn2 {
-  padding : 10px;
-  font-size : 18px;
-  border : none;
-  border-radius : 5px;
-  cursor : pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   width: 100px;
 }
 /* 추가 코딩 : 각 버튼이 다른 디자인 */
 .btn-blue {
-  background-color : blue;
-  color : white;
-} 
+  background-color: blue;
+  color: white;
+}
 /* 추가 코딩 : 각 버튼이 다른 디자인 */
 .btn-red {
-  background-color : red;
-  color : white;
+  background-color: red;
+  color: white;
 }
+
+/* 🦄18 폰트 */
+
+.c18 {
+  /* (1) 왼쪽부터 순차적용. 왼쪽없으면 다음것 적용 */
+  font-family: "gulim", "gothic";
+}
+
+/* (2) font-face 
+사용자가 폰트파일을 다운받아 쓸수있게 함*/
+
+@font-face {
+  font-family: "작명"; /* 폰트이름 작명 */
+  src: url(../font/NanumSquareR.woff); /* 내컴퓨터 폰트파일 위치 */
+  /* ../ : 상위폴더를 뜻함 */
+}
+.c18 {
+  font-family: "작명"; /* 작명한 폰트 적용 */
+}
+
+/* (3) 여러 폰트파일 첨부하기 */
+/* woff: 거의 모든 곳에 적용됨 (가장 많이 쓰임)
+eot : 익스플로러 옛 버전 적용하게..
+ttf : 필요없음. */
+
+@font-face {
+  font-family: "NanumSquare"; /* 작명 */
+  font-weight: 400; /* 폰트굵기...수정가능 */
+  src: url(NanumSquareR.eot);
+  src: url(NanumSquareR.woff) format("woff"),
+    url(NanumSquareR.ttf) format("truetype");
+}
+
+/* (4) google font 👉capture정리*/
+
+/* (5) 폰트 smoothing 팁
+0.03deg 돌리면 , 폰트가 매우 깨끗해짐
+body태그에 적용 x, 태그가 전부다 돌아가서...안됨
+각각 태그에 적용함. p,div,h3...이런식으로 */
+
+p,h3,h2,span{
+  transform: rotate(0.03deg);
+}
+
+
