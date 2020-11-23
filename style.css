@@ -719,3 +719,27 @@ p,h3,h2,span{
   background: violet;
 }
 
+/* 🦄22 em rem vw vh /media query (반응형 레이아웃 만들기) */
+
+.box22 {
+  width : 16px; /* 기본 px 단위 */
+  width : 1rem; /* html태그의 폰트사이즈(16px)의 1배 */
+  width : 1em; /* 상위요소 폰트사이즈의 1배 */
+  
+/* vw vh: 최대값 100vw,vh 
+브라우저 크기 줄이면, vw,vh길이도 같이 따라서 줄어듬*/
+  width : 50vw; /* 브라우저(viewport) 화면 폭의 50% */
+  width : 50vh; /* 브라우저(viewport) 화면 높이의 50% */
+}
+
+
+/* mediaquery */
+@media screen and (max-width: 768px){
+
+}
+/* breakpoint
+1200px : pc
+992px : Tablet
+768px : Tablet or phone
+576px : phone
+ */
