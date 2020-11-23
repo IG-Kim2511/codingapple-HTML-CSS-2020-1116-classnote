@@ -665,4 +665,57 @@ p,h3,h2,span{
   transform: rotate(0.03deg);
 }
 
+/* 🦄19 Flexbox (레이아웃 만들기 3:) */
+
+
+.flex-container {
+  /* (1) 부모 컨테이너에게 flex를 넣음 */
+  display : flex;
+
+  /* (1)-2 좌우정렬  */
+  justify-content : center;  
+  justify-content : flex-end; /* 오른쪽 기준 */
+  justify-content : flex-start; /* 왼쪽 기준 */
+  justify-content : space-around;
+  justify-content : space-between;
+
+
+  /* 상하정렬 */
+  align-items : center;  
+
+ /*폰-pc 반응형만들때 자주 씀 */
+  flex-direction : column;    /* 세로정렬 */
+  flex-direction : row;   /* 가로정렬 (default) */
+
+   /* 박스가 많아지면 다음 줄로 내려감 */
+  flex-wrap : wrap; 
+}
+.box19 {
+  width : 100px;
+  /* width: 100% 넣을때:  서로 방해없이 100%차지함 */
+
+  height : 100px;
+  background : orange;
+  margin : 5px;
+}
+
+/* (2)  flex-grow : 폭이 상대적으로 몇배인지 결정  */
+.flex-container2 {
+  display : flex;
+}
+.box19_2 {
+  flex-grow : 2;  
+}
+.box19_3 {
+  flex-grow : 1;  
+}
+.box19_4 {
+  flex-grow : 2; 
+}
+
+/* (2)-2 nav만들기:  flex-grow로 중간에 빈 박스를 크게 집어넣고 , flex-grow 크게 넣음 */
+.flex-container2 span{
+  flex-grow: 5;
+  background: violet;
+}
 
