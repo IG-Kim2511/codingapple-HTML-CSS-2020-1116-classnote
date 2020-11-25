@@ -997,6 +997,7 @@ border-radius: 5px;
   /* 세로로 배치 */
   .service-items div{
     display: block;
+    text-align: center;
   }
 }
 
@@ -1005,6 +1006,16 @@ border-radius: 5px;
     float: none;
     width: 100%
   }
+}
+
+
+/* 🦄30 Bootstrap 설치와 사용법 */
+
+/* (2) class이용해서 내가만든css추가 가능함 */
+.c30 .mycss{
+  padding: 2rem;
+  margin: 2rem;
+  background: orange;
 }
 
 

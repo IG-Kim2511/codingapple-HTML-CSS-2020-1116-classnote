@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     
 
-    <!-- 🦄24  -->
+    <!-- 🦄24 익스플로러용 css파일 따로 만들기 -->
     <!-- 첨부 순서는 가장 마지막이 좋습니다. 중요한 덮어쓰기 파일일 수록 밑으로 보내시면 됩니다 -->
 
     <!--  if  lower than internet explorer 9 : IE9보다 낮은 버전일때 적용 -->
@@ -23,11 +23,30 @@
    
     <script src="script.js" defer></script>
 
+    <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/4a5f50cc1d.js" crossorigin="anonymous"></script>
+
+    <!--🦄30 bootstrap 설치  -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery-3.4.1.min.js" defer></script>
+    <script src='bootstrap/bootstrap.min.js' defer></script>
+
+    <!--🦄30 bootstrap CDN -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+
+
+
+
 
   </head>
   <body>
     <section>
+      
       🦄02 img p h1 a ul li (HTML 기본 태그로 글 작성해보기)
 
       <img src="/images/etc/spiderman.jpg" alt="" />
@@ -651,7 +670,7 @@
            <div class="portfolio-item1">
             <div class="white-box"></div>  <!-- 박스추가 -->
              <div class="portfolio-text">
-             <h4>Stationary</h4>
+             <h4 style="font-size: 5rem; background: orange;">transition</h4>
              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
              </div>
            </div>
@@ -660,9 +679,42 @@
        <div style="clear: both;"></div>
     </section>
 
-    <section>
-🦄🦄🦄🦄🦄🦄🦄
+    <section class="c30">
+      🦄30 Bootstrap 설치와 사용법
+      👆head태그 확인
+
+      <div>     
+        안정성있는 설치방법 
+
+        https://getbootstrap.com/docs/4.3/getting-started/download/ 
+
+        방문 후 boostrap.min.css, bootstrap.min.js 등의 파일을 다운받아 여러분 작업 폴더에 집어넣습니다. 
+
+        그리고 jQuery도 첨부해야합니다. 
+
+        https://code.jquery.com/jquery-3.4.1.min.js
+
+        사이트에 방문하여 우클릭 – 다른이름으로 저장 해주세요. 
+
+        그리고 여러분의 HTML 파일 내에 다운받은 세개의 파일을 첨부합니다. 
+       </div>
+
+      <div> bootstrap예제
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+      </div>
+      
+        <br>      
+        <!-- (2) --> class이용해서 내가만든css추가 가능함
+        <button type="button" class="btn btn-danger mycss">mycss</button>
+ 
+
+
     </section>
+
+
 
   </div>
   </body>
