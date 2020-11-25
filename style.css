@@ -771,3 +771,72 @@ span {
 }
 
 /* 🦄24 익스플로러용 css파일 따로 만들기 (크롬 개발자 도구와 IE호환성 잡기) */
+
+/* 🦄25 Font Awesome  */
+
+/* 🦄26 Transition 속성으로 CSS 애니메이션 구현하기 */
+.c26-background {
+  background: #f6f6f6;
+  padding-top: 10px;
+  padding-bottom: 90px;
+  margin-top: 100px;
+}
+
+.c26-container {
+  /* ⚾(1) 감싸는 div의  width 지정 필수*/
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  margin-top: 90px;
+  position: relative;
+
+}
+
+.c26-item {
+  float: left;
+  width: 33.3%;
+  padding: 15px;
+}
+.c26-item img { 
+  /* ⚾ (1)-2 부모div의 100%. */
+  width: 100%;
+}
+.c26 .floatlast{
+  clear: both;
+}
+
+.relative{
+    /* (2)-2 position*/
+    position: relative;
+}
+
+/* (2) hover하면 이미지 덮을 div */
+.overlay {
+    /* (2)-2 position */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  /* (2)-3 opacity  */
+  opacity: 0;
+
+  /*(2)-4 transition */
+  transition: all 1s ease-in-out;
+}
+
+.overlay:hover{
+    /* (2)-3 opacity  */
+  opacity: 1;
+}
+
+/*(2)-5 transition 정리
+기억하기 귀찮다면 transition : all 1s; 하나만 쓰셔도 무방합니다.  */
+
+.c26 .box {
+  transition-delay: 1s; /* 시작 전 딜레이 */
+  transition-duration: 0.5s; /* transition 작동 속도 */
+  transition-property: opacity; /* 어떤 속성에 transition 입힐건지 */
+  transition-timing-function: ease-in; /* 동작 속도 그래프조정 */
+}
+
