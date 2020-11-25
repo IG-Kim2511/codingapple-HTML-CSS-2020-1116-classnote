@@ -1,7 +1,5 @@
 /* ● */
 
-
-
 /* 🦄05 margin auto 가운데정렬 (네모네모 박스 디자인) */
 
 /*⚾(1) 박스 가운데 정렬  공식
@@ -774,13 +772,7 @@ span {
 
 /* 🦄25 Font Awesome  */
 
-/* 🦄26 Transition 속성으로 CSS 애니메이션 구현하기 */
-.c26-background {
-  background: #f6f6f6;
-  padding-top: 10px;
-  padding-bottom: 90px;
-  margin-top: 100px;
-}
+/* 🦄26 Transition 애니메이션 */
 
 .c26-container {
   /* ⚾(1) 감싸는 div의  width 지정 필수*/
@@ -790,7 +782,6 @@ span {
 
   margin-top: 90px;
   position: relative;
-
 }
 
 .c26-item {
@@ -798,26 +789,26 @@ span {
   width: 33.3%;
   padding: 15px;
 }
-.c26-item img { 
+.c26-item img {
   /* ⚾ (1)-2 부모div의 100%. */
   width: 100%;
 }
-.c26 .floatlast{
+.c26 .floatlast {
   clear: both;
 }
 
-.relative{
-    /* (2)-2 position*/
-    position: relative;
+.relative {
+  /* (2)-2 position*/
+  position: relative;
 }
 
 /* (2) hover하면 이미지 덮을 div */
 .overlay {
-    /* (2)-2 position */
+  /* (2)-2 position */
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   /* (2)-3 opacity  */
   opacity: 0;
 
@@ -825,12 +816,13 @@ span {
   transition: all 1s ease-in-out;
 }
 
-.overlay:hover{
-    /* (2)-3 opacity  */
+.overlay:hover {
+  /* (2)-3 opacity  */
   opacity: 1;
 }
 
-/*(2)-5 transition 정리
+/*(2)-5 transition 
+.정리
 기억하기 귀찮다면 transition : all 1s; 하나만 쓰셔도 무방합니다.  */
 
 .c26 .box {
@@ -840,3 +832,37 @@ span {
   transition-timing-function: ease-in; /* 동작 속도 그래프조정 */
 }
 
+/* 🦄27 Transition overflow: hidden;  부모div에 hover하면, 자식div가 translate하게 코딩 (숙제 : 상품진열 레이아웃과 애니메이션) */
+
+/* (1)알고리즘: 
+ 부모div,자식div 만든 후, 
+부모div에 hover하면, 자식div가 translate하게 코딩 */
+
+.wrap-overlay {
+  width: 100%;
+  height: 100%;
+  /* position */
+  position: absolute;
+
+  /* (1)-4 div밖 넘치는 부분 잘라냄 */
+  overflow: hidden;
+}
+
+.overlay27 {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+
+  /* position */
+  position: relative;
+
+  /*(1)-3 */
+  top: 100%;
+  transition: all 0.5s;
+}
+
+/*⚾(1)-2 부모div에 hover하면, 자식div가 translate한다는 뜻 */
+.wrap-overlay:hover .overlay27 {
+  /*(1)-3 */
+  top: 50%;
+}

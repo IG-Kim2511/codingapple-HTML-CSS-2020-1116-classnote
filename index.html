@@ -27,12 +27,12 @@
     <section>
       🦄02 img p h1 a ul li (HTML 기본 태그로 글 작성해보기)
 
-      <img src="/images/etc/iu(1).jpg" alt="" />
+      <img src="/images/etc/spiderman.jpg" alt="" />
       <p>ppppppppp</p>
       <h1>pppppp</h1>
    
       <a href="http://naver.com" target="_blank">
-        <img src="/images/etc/iu(2).jpg" alt="" />a
+        <img src="/images/etc/spiderman.png" alt="" />a
       </a>
 
       <br>
@@ -66,7 +66,7 @@
       <!-- ⚾image 가운데 정렬 : display: block; margin: auto -->
 
       <img
-        src="images/etc/iu(1).jpg"
+        src="images/etc/ironman (2).png"
         alt=""
         style="display: block; margin: auto"
       />
@@ -519,34 +519,59 @@
     </section>
 
     <section class="c26">
-      🦄26 Transition 속성으로 CSS 애니메이션 구현하기
-
-      <div class="c26-background">
-        <!-- (1) -->
-        <div class="c26-container">      
-          <div class="c26-item">
-            <div class="relative">
-              <!--  (2)--> (2) hover하면 이미지 덮을 div 
-              <div class="overlay"></div>
-              <!-- (1)-2 -->
-              <img src="images/etc/iu(3).jpg">
-            </div>
-          </div>
+      🦄26 Transition 애니메이션
       
-          <div class="c26-item">
-            <div class="relative">      
-              <div class="overlay">  </div>                 
-              <img src="images/etc/iu(4).jpg">          
-             </div>
+      <!-- (1) -->
+      <div class="c26-container">      
+        <div class="c26-item">
+          <div class="relative">
+            <!--  (2)--> (2) hover하면 이미지 덮을 div 
+            <div class="overlay"></div>
+            <!-- (1)-2 -->
+            <img src="images/etc/spiderman.jpg">
           </div>
-      
-          <div class="floatlast"></div>
         </div>
+    
+        <div class="c26-item">
+          <div class="relative">      
+            <div class="overlay">  </div>                 
+            <img src="images/etc/spiderman.png">          
+            </div>
+        </div>      
+        <div class="floatlast"></div>
       </div>
+ 
     </section>
 
     <section>
-      🦄27 아직 강의 안들음
+      🦄27 Transition overflow: hidden;  부모div에 hover하면, 자식div가 translate하게 코딩 (숙제 : 상품진열 레이아웃과 애니메이션)
+
+      <div class="c26-container">      
+        <div class="c26-item">
+          <div class="relative">     
+
+            <!-- (1) -->
+            <div class="wrap-overlay">
+              <div class="overlay27"></div>   
+            </div>   
+
+            <img src="images/etc/spiderman.jpg">
+          </div>
+        </div>
+    
+        <div class="c26-item">
+          <div class="relative">    
+      
+            <div class="wrap-overlay">
+              <div class="overlay27">  </div>  
+            </div>   
+
+            <img src="images/etc/spiderman.png">          
+            </div>
+        </div>      
+        <div class="floatlast"></div>
+      </div>
+
 
     </section>
 
