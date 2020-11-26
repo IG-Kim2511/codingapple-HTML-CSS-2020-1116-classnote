@@ -1,4 +1,7 @@
 /* ● */
+.title{
+  background: lightgreen;
+}
 
 /* 🦄05 margin auto 가운데정렬 (네모네모 박스 디자인) */
 
@@ -28,7 +31,7 @@
   /* (1)-2   margin: auto;와 같은 의미 */
   margin-left: auto;
   margin-right: auto;
-}
+  }
 
 .description-2 {
   width: 100px;
@@ -1029,6 +1032,14 @@ border-radius: 5px;
 .c32 .row .mycss{
   background: green;
 }
+
+/* 🦄33 CSS 덮어쓰기 잘하는 법+ Specificity 점수 */
+
+/* (2) */
+.c33 .box33 {
+  background : red;
+}
+
 
 
 
