@@ -1024,6 +1024,11 @@ border-radius: 5px;
   background: orange;
 }
 
+/* 🦄32 Bootstrap Grid2 pc에서는 4열, tablet에서는 2열 만들기 (레이아웃 숙제 : Pricing 페이지) */
+
+.c32 .row .mycss{
+  background: green;
+}
 
 
 
