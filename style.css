@@ -1,5 +1,5 @@
 /* ● */
-.title{
+.title {
   background: lightgreen;
 }
 
@@ -31,7 +31,7 @@
   /* (1)-2   margin: auto;와 같은 의미 */
   margin-left: auto;
   margin-right: auto;
-  }
+}
 
 .description-2 {
   width: 100px;
@@ -66,13 +66,13 @@ clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 �
 .header {
   width: 100%;
   height: 50px;
-  background-color: blue;
+  background-color: lightblue;
 }
 
 .left-box {
   width: 20%;
   height: 100px;
-  background-color: aqua;
+  background-color: lightpink;
   /* (1) float */
   float: left;
 }
@@ -80,14 +80,14 @@ clear 속성을 사용하면 float 다음에 오는 박스들이 제자리를 �
   width: 80%;
   height: 100px;
   float: left;
-  background-color: green;
+  background-color: lightcyan;
 }
 .footer {
   width: 100%;
   height: 50px;
   /* (1)-2 clear 속성 */
   clear: both;
-  background-color: grey;
+  background-color: lightseagreen;
 }
 
 /*  🦄07 display: inline-block (레이아웃 만들기 2) */
@@ -872,22 +872,21 @@ span {
 
 /* 🦄28 29 Portfolio 실습 1 : Landing Page */
 
-
 /* (1) linear-gradient
 to bottom은 그레이디언트의 방향을 의미하고 뒤의 두개의 색상은 gradient 넣을 색상 두개를 집어넣으시면 됩니다.  */
 
 .main-background {
   /* (1) */
-	background-image: linear-gradient(to bottom, #499add, #4e61c0);
-	height: 550px;
-	padding: 20px;
-	color: white;
+  background-image: linear-gradient(to bottom, #499add, #4e61c0);
+  height: 550px;
+  padding: 20px;
+  color: white;
 }
 .container {
   max-width: 1200px;
   margin: auto;
 }
- 
+
 /* (2) text-image 왼쪽 오른쪽 float */
 .main-iphone {
   width: 400px;
@@ -907,8 +906,8 @@ to bottom은 그레이디언트의 방향을 의미하고 뒤의 두개의 색�
 
 /* (3)btn */
 .btn28 {
-padding: 10px;
-border-radius: 5px;
+  padding: 10px;
+  border-radius: 5px;
 }
 .btn-black28 {
   color: black;
@@ -937,7 +936,7 @@ border-radius: 5px;
 }
 
 /* 가로로 배치 */
-.service-items div{
+.service-items div {
   display: inline-block;
   padding: 20px;
 }
@@ -952,7 +951,8 @@ border-radius: 5px;
 .portfolio-item1 {
   position: relative;
   /* (5)linear-gradient */
-  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(/images/portfolio-1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/portfolio-1.jpg);
   width: 50%;
   height: 350px;
   background-size: cover;
@@ -973,16 +973,16 @@ border-radius: 5px;
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index : 2;
-  border : 0px solid white;
+  z-index: 2;
+  border: 0px solid white;
   transition: all 0.3s ease-in;
 }
 
 .white-box:hover {
-  border : 30px solid white;
+  border: 30px solid white;
 }
 
-@media screen and (max-width : 992px) {
+@media screen and (max-width: 992px) {
   .main-iphone {
     width: 260px;
     display: block;
@@ -998,24 +998,23 @@ border-radius: 5px;
 
   /* service  */
   /* 세로로 배치 */
-  .service-items div{
+  .service-items div {
     display: block;
     text-align: center;
   }
 }
 
-@media screen and (max-width : 768px) {
+@media screen and (max-width: 768px) {
   .portfolio-item1 {
     float: none;
-    width: 100%
+    width: 100%;
   }
 }
-
 
 /* 🦄30 Bootstrap 설치와 사용법 */
 
 /* (2) class이용해서 내가만든css추가 가능함 */
-.c30 .mycss{
+.c30 .mycss {
   padding: 2rem;
   margin: 2rem;
   background: orange;
@@ -1023,13 +1022,13 @@ border-radius: 5px;
 
 /* 🦄31 Bootstrap Grid  */
 
-.c31 .row .mycss{
+.c31 .row .mycss {
   background: orange;
 }
 
 /* 🦄32 Bootstrap Grid2 pc에서는 4열, tablet에서는 2열 만들기 (레이아웃 숙제 : Pricing 페이지) */
 
-.c32 .row .mycss{
+.c32 .row .mycss {
   background: green;
 }
 
@@ -1037,20 +1036,20 @@ border-radius: 5px;
 
 /* (2) */
 .c33 .box33 {
-  background : red;
+  background: red;
 }
 
 /* 🦄34 35 Portfolio 실습2: Bootstrap사용 (SNS Profile) */
 
-.c35{
+.c35 {
   background: #f7f9fc;
 }
 
 .white-box35 {
-	background: white;
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0.5px 0.5px 2px 1px #eee;/*box-shadow: x,y, blur.spread */
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0.5px 0.5px 2px 1px #eee; /*box-shadow: x,y, blur.spread */
 }
 
 .center {
@@ -1059,42 +1058,99 @@ border-radius: 5px;
   justify-content: center;
 }
 
-
-.c35 .intro{
+.c35 .intro {
   width: 30%;
   margin: auto;
 }
 
-.c35 .detail i{
-  color: rgb(0,122,255);
+.c35 .detail i {
+  color: rgb(0, 122, 255);
   font-size: 3rem;
   transition: all 0.3s ease-in-out;
 }
-.c35 .detail i:hover{
+.c35 .detail i:hover {
   font-size: 4rem;
 }
-.c35 .skills{
+.c35 .skills {
   margin: 4rem;
 }
 
 /* display: inline-block: 가로정렬©, 높이,폭조절© */
-.c35 .skills button{
-  display: inline-block; 
-	border: 1px solid lightgray;
-	border-radius: 100px;
-	padding: 3px 12px 5px 12px;
-	margin-right: 2px;
-	margin-bottom: 5px;
+.c35 .skills button {
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 100px;
+  padding: 3px 12px 5px 12px;
+  margin-right: 2px;
+  margin-bottom: 5px;
 }
 
 /* 🦄36 Pseudo-element  */
+/*⚾(속한 태그의) 내부에 추가하는것  */
+/* ::first-letter
+::before
+::after....etc */
 
+/* (1) */
+.c36 .Pseudo::first-letter {
+  background: red;
+}
 
+/* (1) */
+.c36 .Pseudo::before {
+  content: "before";
+  color: lightgreen;
+}
 
+/* (1) */
+.c36 .Pseudo::after {
+  content: "after";
+  color: lightcoral;
+}
 
+/* (2) Pseudo-element로 float...clear:both박스 만들기
+:부모div에 ::after로 clear:both 넣기. 
+속한태그의 내부에서 생성 되므로
 
+text없이 빈칸,
+div태그의 속성... display:block
+clear:both
+*/
 
+.Pseudo2::after{
+  content : '';   /* (2) */
+  display : block;  /* (2) */
+  clear : both;    /* (2) */
 
+  width: 100%;
+  height: 50px;
+  background-color: lightseagreen;
+}
 
+.c36 .header36 {
+  width: 100%;
+  height: 50px;
+  background-color: lightblue;
+}
 
+.c36 .left-box36 {
+  width: 20%;
+  height: 100px;
+  background-color: lightpink;
 
+  float: left;
+}
+.c36 .right-box36 {
+  width: 80%;
+  height: 100px;
+  background-color: lightcyan;
+
+  float: left;
+}
+/* .c36 .footer36 {
+  width: 100%;
+  height: 50px;
+  background-color: lightseagreen;
+
+  clear : both;
+} */
