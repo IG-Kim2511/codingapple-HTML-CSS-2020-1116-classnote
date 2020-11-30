@@ -1,3 +1,52 @@
+// 🦄39 Sass 1: 셋팅
+
+/*
+compile하는법
+
+1. node.js-scss설치방식 (node.js-npm install)
+
+2. https://www.sassmeister.com/
+
+3. koala : JS도 사용하는 경우
+
+4. scout : JS 안 쓸때
+*/
+
+/* 
+⚾node.js-scss설치방식 (node.js-npm install)
+
+1.
+$ npm install -g npm@latest
+$ npm install -g node-sass
+
+2-1
+(sass설치된 폴더 이동)
+파일 컴파일
+$ node-sass foo.scss > bar.css
+
+2-2
+폴더전체 컴파일
+$ node-sass src/sass --output dist/css
+
+3.compile 스타일 결정
+3-1. expanded
+$ node-sass --output-style expanded src/sass --output dist/css
+
+3-2. compact
+$ node-sass --output-style compact src/sass --output dist/css
+
+4. watch :  scss 파일을 컴파일하여 css 파일을 자동 업데이트
+(sass설치된 폴더의 부모폴더 이동)
+
+4-1
+파일 watch
+$ node-sass --watch src/sass/foo.scss --output dist/css
+
+4-2 
+폴더전체 watch
+$ node-sass --watch src/sass --output dist/css
+ */
+
 /* Scss */
 
 $main-color: #2a4c6e;

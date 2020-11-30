@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Scss */
+.text39 {
+  color: #2a4c6e;
+}
+
+.box39 {
+  background: #333333;
+}
+
+/* Sass문법
+
+; { } 삭제함
+
+indent(빈칸) 넣어야함
+$메인색상 : #2a4c6e
+ */
+/* 
+.text 
+  color: $메인색상
+ */
