@@ -1109,6 +1109,7 @@ to bottom은 그레이디언트의 방향을 의미하고 뒤의 두개의 색�
 }
 
 /* (2) Pseudo-element로 float...clear:both박스 만들기
+(footer...마지막 div에 굳이 clear:both하지않아도 됨)
 :부모div에 ::after로 clear:both 넣기. 
 속한태그의 내부에서 생성 되므로
 
@@ -1116,16 +1117,6 @@ text없이 빈칸,
 div태그의 속성... display:block
 clear:both
 */
-
-.Pseudo2::after{
-  content : '';   /* (2) */
-  display : block;  /* (2) */
-  clear : both;    /* (2) */
-
-  width: 100%;
-  height: 50px;
-  background-color: lightseagreen;
-}
 
 .c36 .header36 {
   width: 100%;
@@ -1147,10 +1138,53 @@ clear:both
 
   float: left;
 }
+
+.Pseudo2::after {
+  content: ""; /* (2) */
+  display: block; /* (2) */
+  clear: both; /* (2) */
+
+  width: 100%;
+  height: 50px;
+  background-color: lightseagreen;
+}
+
 /* .c36 .footer36 {
   width: 100%;
   height: 50px;
   background-color: lightseagreen;
 
   clear : both;
+} */
+
+/* 🦄37 Shadow DOM */
+
+
+/* input::placeholder {
+  color : red; 
+}
+
+
+ogress {
+  /*기본 배경은 없애주는게 좋습니다*/
+  -webkit-appearance: none;
+  -moz-appearance : none;
+  appearance: none;
+  background: white;
+/* IE10 호환성용 */
+  color: red;
+}
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+}
+progress::-webkit-progress-value {
+  background-color: red;
+  border-radius: 2px;
+}
+
+/*파이어폭스 호환성을 위해*/
+progress::-moz-progress-bar {
+  background-color: red;
+  border-radius: 2px;
 } */
