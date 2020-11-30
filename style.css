@@ -1158,33 +1158,25 @@ clear:both
 } */
 
 /* 🦄37 Shadow DOM */
+/* HTML 개발시 코드가 너무 복잡해지지 않기 위해 숨겨놓은 HTML 요소들
+1. 개발자도구를 켠 상태에서 F1 (혹은 Settings 메뉴)를 누르면 나오는 곳에서 
+2. Show user agent shadow DOM을 체크하시면 됩니다.  */
 
-
-/* input::placeholder {
-  color : red; 
-}
-
-
-ogress {
-  /*기본 배경은 없애주는게 좋습니다*/
-  -webkit-appearance: none;
-  -moz-appearance : none;
-  appearance: none;
-  background: white;
-/* IE10 호환성용 */
+/*(2) .test안의 placeholder요소 택함 */
+.test37::placeholder {
   color: red;
 }
-progress::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 2px;
-}
-progress::-webkit-progress-value {
-  background-color: red;
-  border-radius: 2px;
+
+/* (2)  */
+.test37-2::-webkit-input-placeholder {
+  color: blue;
 }
 
-/*파이어폭스 호환성을 위해*/
-progress::-moz-progress-bar {
-  background-color: red;
-  border-radius: 2px;
-} */
+/* (3) */
+.test-p progress::-webkit-progress-value {
+  background: yellow;
+}
+
+.test-p progress::-webkit-progress-bar {
+  background: red;
+}
