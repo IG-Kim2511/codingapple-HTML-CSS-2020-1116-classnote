@@ -10,7 +10,7 @@
 /* (2) 앞에 selector가 많이 붙으면 specificity점수가 올라감
 똑같은 셀렉터 사용해서 만듬 */
 .c33 .box33 {
-    background : yellow;
+    background : lightblue;
   }
 
 /* !important */
