@@ -1,4 +1,4 @@
-// 🦄39 Sass 1: 셋팅
+// 🦄39 Sass 1: 셋팅.설치
 
 /*
 compile하는법
@@ -72,3 +72,48 @@ $메인색상 : #2a4c6e
 .text 
   color: $메인색상
  */
+
+//  🦄40 Sass 2: Nesting. import문법. @mixin. @include
+
+// (1) Nesting
+.c40 {
+  div {
+    background-color: orange;
+  }
+  h3 {
+    background-color: green;
+  }
+}
+
+// (2) import문법
+
+@import "_reset.scss";
+
+// (3) extend문법
+%btn40 {
+  padding: 10px;
+  font-size: 16px;
+  background-color: green;
+}
+
+.btn40-red {
+  @extend %btn40;
+  background: coral;
+}
+
+// (3) @mixin (){} / @include()
+
+@mixin Ig($param, $param2) {
+  font-size: $param;
+  background-color: $param2;
+}
+
+h2 {
+  @include Ig(1.5rem, red);
+}
+h3 {
+  @include Ig(1rem, blue);
+}
+h4 {
+  @include Ig(0.5rem);
+}

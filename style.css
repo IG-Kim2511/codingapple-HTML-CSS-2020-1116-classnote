@@ -568,7 +568,7 @@ thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
 
 /*🦄17 pseudo-class. CSS 아키텍처 */
 
-.btn {
+.btn17 {
   padding: 10px;
   font-size: 18px;
   border: none;
@@ -580,13 +580,13 @@ thead의 th에만 넣어도, tbody의 td에도 적용됨 (일종의 편법)
 /* (1) Pseudo-class */
 /* hover👉focus👉activ 순서로 코딩하면 에러가 없음 */
 
-.btn:hover {
+.btn17:hover {
   background: violet; /*마우스를 갖다댔을 때*/
 }
-.btn:focus {
+.btn17:focus {
   background: red; /*커서가 찍혀있을 때*/
 }
-.btn:active {
+.btn17:active {
   background: green; /*누르고 있을 때*/
 }
 
