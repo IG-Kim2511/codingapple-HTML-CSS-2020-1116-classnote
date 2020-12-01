@@ -117,3 +117,65 @@ h3 {
 h4 {
   @include Ig(0.5rem);
 }
+
+// 🦄41 Sass 3편 : sass+bootstrap실습
+
+// 1) nesting
+.c41 .test-list {
+  li {
+    list-style: none;
+    padding: 15px;
+    border: 1px solid #eee;
+  }
+  .active {
+    background-color: violet;
+  }
+}
+
+// 2) @extend
+.box41 {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.box41-yellow {
+  @extend .box41;
+  background-color: yellow;
+}
+.box41-green {
+  @extend .box41;
+  background-color: green;
+}
+
+// 3)편집전 원본
+.c41 .row {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  .col-6 {
+    float: left;
+    width: 50%;
+  }
+  .col-4 {
+    float: left;
+    width: 33.33%;
+  }
+}
+
+// 3)-2 @maxin. @include. parameter
+@mixin coolguy($param) {
+  float: left;
+  width: $param;
+}
+
+.c41 .row {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  .col-6 {
+    @include coolguy(50%);
+  }
+  .col-4 {
+    @include coolguy(33%);
+  }
+}
