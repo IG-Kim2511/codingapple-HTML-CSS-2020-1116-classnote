@@ -923,12 +923,23 @@
 
     <section class="c42">
       <p class="title">🦄42 비디오 배경 넣는 법</p>
+      <!-- 1)  형태...중요함 
+        <video>
+          <source src="">
+        </video>         -->
+
+      <!-- (크롬브라우저 정책 ) autoplay + muted같이 써야함
+       type="video/mp4":  안쓰면 로딩 느림 -->
+
+       <!-- 4) poster="" 비디오 로딩때 보일 썸네일  -->
        
        <div class="video-box">
+
         <video class="video-container" poster="images/etc/spiderman.jpg" loop autoplay muted>
-        <source src="images/bridge.mp4" type="video/mp4"> 
-        <source src="images/bridge.webm" type="video/webm"> 
+          <source src="images/bridge.mp4" type="video/mp4"> 
+          <source src="images/bridge.webm" type="video/webm"> 
         </video>
+        
         <h3 class="video-title">buy or shoes.</h3>        
       </div>
 

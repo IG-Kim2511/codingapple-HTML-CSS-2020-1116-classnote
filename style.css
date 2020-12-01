@@ -1185,16 +1185,38 @@ clear:both
 
 /* 🦄42 비디오 배경 넣는 법 */
 
-.video-box{
+/*⚾ 3) 가운데 정렬 공식
+  부모 컨테이너 { position: relative; }
+
+.비디오 컨테이너 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+*/
+
+/* 3) 가운데 정렬 공식 */
+.video-box {
   height: 300px;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-.video-container{
+
+/* 3) 가운데 정렬 공식 */
+.video-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 0;
+}
+
+.video-title {
+  color: white;
+  position: absolute;
+  top: 20%;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
 }
