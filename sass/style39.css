@@ -1,9 +1,11 @@
 @charset "UTF-8";
 .c40 div {
-  color: red; }
+  color: red;
+}
 
 .c40 div {
-  font-size: 2rem; }
+  font-size: 2rem;
+}
 
 /*
 compile하는법
@@ -52,10 +54,12 @@ $ node-sass --watch src/sass --output dist/css
  */
 /* Scss */
 .text39 {
-  color: #2a4c6e; }
+  color: #2a4c6e;
+}
 
 .box39 {
-  background: #333333; }
+  background: #333333;
+}
 
 /* Sass문법
 
@@ -69,68 +73,91 @@ $메인색상 : #2a4c6e
   color: $메인색상
  */
 .c40 div {
-  background-color: orange; }
+  background-color: orange;
+}
 
 .c40 h3 {
-  background-color: green; }
+  background-color: green;
+}
 
 .btn40-red {
   padding: 10px;
   font-size: 16px;
-  background-color: green; }
+  background-color: green;
+}
 
 .btn40-red {
-  background: coral; }
+  background: coral;
+}
 
 h2 {
   font-size: 1.5rem;
-  background-color: red; }
+  background-color: red;
+}
 
 h3 {
   font-size: 1rem;
-  background-color: blue; }
+  background-color: blue;
+}
 
 h4 {
   font-size: 0.5rem;
-  background-color: green; }
+  background-color: green;
+}
 
 .c41 .test-list li {
   list-style: none;
   padding: 15px;
-  border: 1px solid #eee; }
+  border: 1px solid #eee;
+}
 
 .c41 .test-list .active {
-  background-color: violet; }
+  background-color: violet;
+}
 
 .box41, .box41-yellow, .box41-green {
   padding: 10px;
   padding-left: 20px;
-  border-radius: 5px; }
+  border-radius: 5px;
+}
 
 .box41-yellow {
-  background-color: lightskyblue; }
+  background-color: lightskyblue;
+}
 
 .box41-green {
-  background-color: green; }
+  background-color: green;
+}
 
 .c41 .row {
   width: 100%;
   max-width: 900px;
-  margin: auto; }
-  .c41 .row .col-6 {
-    float: left;
-    width: 50%; }
-  .c41 .row .col-4 {
-    float: left;
-    width: 33.33%; }
+  margin: auto;
+}
+
+.c41 .row .col-6 {
+  float: left;
+  width: 50%;
+}
+
+.c41 .row .col-4 {
+  float: left;
+  width: 33.33%;
+}
 
 .c41 .row {
   width: 100%;
   max-width: 900px;
-  margin: auto; }
-  .c41 .row .col-6 {
-    float: left;
-    width: 50%; }
-  .c41 .row .col-4 {
-    float: left;
-    width: 33%; }
+  margin: auto;
+}
+
+.c41 .row .col-6 {
+  float: left;
+  width: 50%;
+}
+
+.c41 .row .col-4 {
+  float: left;
+  width: 33%;
+}
+/*# sourceMappingURL=style39.css.map */
