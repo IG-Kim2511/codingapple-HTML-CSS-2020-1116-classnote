@@ -1,10 +1,10 @@
 @import "_reset.scss";
 
-  
 // 🦄39 Sass 1: 셋팅.설치
 
 /*
 compile하는법
+0. vsc extension : live Sass compiler
 
 1. node.js-scss설치방식 (node.js-npm install)
 
@@ -49,8 +49,7 @@ $ node-sass --watch src/sass/foo.scss --output dist/css
 폴더전체 watch
 $ node-sass --watch src/sass --output dist/css
  */
- 
- 
+
 /* Scss */
 
 $main-color: #2a4c6e;
@@ -77,113 +76,108 @@ $메인색상 : #2a4c6e
   color: $메인색상
  */
 
- 
-
 //  🦄40 Sass 2: Nesting. import문법. @mixin. @include
 
 // (1) Nesting
 .c40 {
-    div {
-      background-color: orange;
-    }
-    h3 {
-      background-color: green;
-    }
-  }
-  
-  // (2) import문법
-  // 👆 @import "_reset.scss";
-  
-  // (3) extend문법
-  %btn40 {
-    padding: 10px;
-    font-size: 16px;
-    background-color: green;
-  }
-  
-  .btn40-red {
-    @extend %btn40;
-    background: coral;
-  }
-  
-  // (3) @mixin (){} / @include()
-  
-  @mixin ig($param, $param2) {
-    font-size: $param;
-    background-color: $param2;
-  }
-  
-  h2 {
-    @include ig(1.5rem, red);
+  div {
+    background-color: orange;
   }
   h3 {
-    @include ig(1rem, blue);
+    background-color: green;
   }
-  h4 {
-    @include ig(0.5rem,green);
-  }
+}
 
-  
+// (2) import문법
+// 👆 @import "_reset.scss";
+
+// (3) extend문법
+%btn40 {
+  padding: 10px;
+  font-size: 16px;
+  background-color: green;
+}
+
+.btn40-red {
+  @extend %btn40;
+  background: coral;
+}
+
+// (3) @mixin (){} / @include()
+
+@mixin ig($param, $param2) {
+  font-size: $param;
+  background-color: $param2;
+}
+
+h2 {
+  @include ig(1.5rem, red);
+}
+h3 {
+  @include ig(1rem, blue);
+}
+h4 {
+  @include ig(0.5rem, green);
+}
+
 // 🦄41 Sass 3편 : sass+bootstrap실습
 
 // 1) nesting
 .c41 .test-list {
-    li {
-      list-style: none;
-      padding: 15px;
-      border: 1px solid #eee;
-    }
-    .active {
-      background-color: violet;
-    }
+  li {
+    list-style: none;
+    padding: 15px;
+    border: 1px solid #eee;
   }
-  
-  // 2) @extend
-  .box41 {
-    padding: 10px;
-    padding-left: 20px;
-    border-radius: 5px;
+  .active {
+    background-color: violet;
   }
-  .box41-yellow {
-    @extend .box41;
-    background-color: lightskyblue;
-  }
-  .box41-green {
-    @extend .box41;
-    background-color: green;
-  }
-  
-  // 3)편집전 원본
-  .c41 .row {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    .col-6 {
-      float: left;
-      width: 50%;
-    }
-    .col-4 {
-      float: left;
-      width: 33.33%;
-    }
-  }
-  
-  // 3)-2 @maxin. @include. parameter
-  @mixin coolguy($param) {
+}
+
+// 2) @extend
+.box41 {
+  padding: 10px;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.box41-yellow {
+  @extend .box41;
+  background-color: lightskyblue;
+}
+.box41-green {
+  @extend .box41;
+  background-color: green;
+}
+
+// 3)편집전 원본
+.c41 .row {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  .col-6 {
     float: left;
-    width: $param;
+    width: 50%;
   }
-  
-  .c41 .row {
-    width: 100%;
-    max-width: 900px;
-    margin: auto;
-    .col-6 {
-      @include coolguy(50%);
-    }
-    .col-4 {
-      @include coolguy(33%);
-    }
+  .col-4 {
+    float: left;
+    width: 33.33%;
   }
+}
 
+// 3)-2 @maxin. @include. parameter
+@mixin coolguy($param) {
+  float: left;
+  width: $param;
+}
 
+.c41 .row {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  .col-6 {
+    @include coolguy(50%);
+  }
+  .col-4 {
+    @include coolguy(33%);
+  }
+}
