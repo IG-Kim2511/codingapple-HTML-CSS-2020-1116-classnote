@@ -165,7 +165,7 @@ h4 {
 }
 
 // 3)-2 @maxin. @include. parameter
-@mixin coolguy($param) {
+@mixin mynaming41($param) {
   float: left;
   width: $param;
 }
@@ -175,9 +175,9 @@ h4 {
   max-width: 900px;
   margin: auto;
   .col-6 {
-    @include coolguy(50%);
+    @include mynaming41(50%);
   }
   .col-4 {
-    @include coolguy(33%);
+    @include mynaming41(33%);
   }
 }

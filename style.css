@@ -1204,7 +1204,6 @@ clear:both
   position: relative;
 }
 
-
 .video-container {
   /* 3) 가운데 정렬 공식 */
   position: absolute;
@@ -1225,60 +1224,167 @@ clear:both
 }
 
 /* 🦄43 transform-animation.@keyframes: 애니메이션 만들기 */
+/* transform 장점 : 해당div만 움직이고, 다른 div에 영향x */
 
-.basic43{
-  background-color: violet; 
+.basic43 {
+  background-color: violet;
   text-align: center;
 }
 
 /* 1) transform */
-.ig-transform43{
+.ig-transform43 {
   transform: rotate(10deg);
 }
-.ig-transform43-2{
-  transform: translate(60px,-10px);
+.ig-transform43-2 {
+  transform: translate(60px, -10px);
 }
-.ig-transform43-3{
+.ig-transform43-3 {
   transform: scale(2);
 }
-.ig-transform43-4{
-  transform: scale(2,3);
+.ig-transform43-4 {
+  transform: scale(2, 3);
 }
 
-.ig-transform43-5{
-    /*transform 두개 이상을 한꺼번에 쓰려면*/
-    transform : rotate(10deg) translateX(30px);
+.ig-transform43-5 {
+  /*transform 두개 이상을 한꺼번에 쓰려면*/
+  transform: rotate(10deg) translateX(30px);
 }
 
 /* 2) keyframes */
 
-.ig43:hover{
+.ig43:hover {
   animation-name: mynaming43;
   animation-duration: 1s;
 }
 
-@keyframes mynaming43{
+@keyframes mynaming43 {
   0% {
-    transform : translateX(0px); /* 애니메이션이 0%만큼 동작시 */
+    transform: translateX(0px); /* 애니메이션이 0%만큼 동작시 */
   }
   50% {
-    transform : translateX(50px); /* 애니메이션이 50%만큼 동작시 */
+    transform: translateX(50px); /* 애니메이션이 50%만큼 동작시 */
   }
   100% {
-    transform : translatey(50px); /* 애니메이션이 100%만큼 동작시 */
+    transform: translatey(50px); /* 애니메이션이 100%만큼 동작시 */
   }
 }
 
 /* 3) keyframes-animation속성  */
-{
-  animation-name : mynaming2;
-  animation-duration : 1s;
-  animation-timing-function : linear; /*동작속도(transition 강의참고)*/
-  animation-delay : 1s; /*시작 전 딜레이*/
-  animation-iteration-count : infinite; /*몇회 반복할것인가*/
-  animation-play-state : paused;  /*애니메이션을 멈추고 싶은 경우 자바스크립트로 이거 조정*/
-  animation-fill-mode: forwards;  /*애니메이션 끝난 후에 원상복구 하지말고 정지*/
+ .속성{
+  animation-name: mynaming2;
+  animation-duration: 1s;
+  animation-timing-function: linear; /*동작속도(transition 강의참고)*/
+  animation-delay: 1s; /*시작 전 딜레이*/
+  animation-iteration-count: infinite; /*몇회 반복할것인가*/
+  animation-play-state: paused; /*애니메이션을 멈추고 싶은 경우 자바스크립트로 이거 조정*/
+  animation-fill-mode: forwards; /*애니메이션 끝난 후에 원상복구 하지말고 정지*/
 }
+
+
+/*🦄44 transform & animation 숙제 : 움직이는 메뉴 UI */
+
+.basic44{
+  padding: 20px;
+  font-size: 22px;
+  background: skyblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-family: 'nanumsquare';
+  margin: auto;
+  display: block;
+  margin-top: 150px;
+}
+
+/* 1) 흔들리는 버튼 */
+.btn44:hover{
+  animation-name: mynaming44;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mynaming44{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(-8deg);}
+  75%{transform: rotate(8deg);}
+}
+
+.basic44-2{
+  margin: 150px auto;
+  text-align: center;
+  font-size: 70px;
+  width: 84px;
+  cursor: pointer;
+}
+
+/* 2) x돌아서 +되기 */
+.x44:hover{
+animation-name: mynaming44-2;
+animation-duration: 1s;
+animation-fill-mode: forwards;
+}
+
+@keyframes mynaming44-2{
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(-15deg);}
+  100%{transform: rotate(45deg) scale(2);}
+}
+
+/* 3) 메뉴에 마우스 올리면 transform */
+
+.basic44-3{
+  width: 300px;
+  background-color: black;
+  color: white;
+  height: 50vh;
+  padding: 25px;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  z-index: 5;
+}
+
+/* 3)-1 */
+.navbar44{
+  transition: all 1s;
+  transform: translateX(-250px);
+
+  text-align: right;
+}
+
+.navbar44:hover{
+transform: translateX(0px);
+
+text-align: center;
+}
+
+/* 3)-2 */
+.navbar-item44{
+  transition: all 1s;
+  transform: translateX(-400px);
+}
+
+/* navbar에 hover하면, items에 transform */
+.navbar44:hover .navbar-item44{
+  transform: translate(0px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
