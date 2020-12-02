@@ -1183,7 +1183,7 @@ clear:both
 
 /* 🦄39~41 Sass 1~3: 셋팅 */
 
-/* 🦄42 비디오 배경 넣는 법 */
+/* 🦄42 video.source.가운데정렬(비디오 배경 넣는 법) */
 
 /*⚾ 3) 가운데 정렬 공식
   부모 컨테이너 { position: relative; }
@@ -1195,20 +1195,23 @@ clear:both
   transform: translate(-50%, -50%); }
 */
 
-/* 3) 가운데 정렬 공식 */
 .video-box {
   height: 300px;
   width: 100%;
   overflow: hidden;
+
+  /* 3) 가운데 정렬 공식 */
   position: relative;
 }
 
-/* 3) 가운데 정렬 공식 */
+
 .video-container {
+  /* 3) 가운데 정렬 공식 */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   z-index: 0;
 }
 
@@ -1220,3 +1223,94 @@ clear:both
   width: 100%;
   text-align: center;
 }
+
+/* 🦄43 transform-animation.@keyframes: 애니메이션 만들기 */
+
+.basic43{
+  background-color: violet; 
+  text-align: center;
+}
+
+/* 1) transform */
+.ig-transform43{
+  transform: rotate(10deg);
+}
+.ig-transform43-2{
+  transform: translate(60px,-10px);
+}
+.ig-transform43-3{
+  transform: scale(2);
+}
+.ig-transform43-4{
+  transform: scale(2,3);
+}
+
+.ig-transform43-5{
+    /*transform 두개 이상을 한꺼번에 쓰려면*/
+    transform : rotate(10deg) translateX(30px);
+}
+
+/* 2) keyframes */
+
+.ig43:hover{
+  animation-name: mynaming43;
+  animation-duration: 1s;
+}
+
+@keyframes mynaming43{
+  0% {
+    transform : translateX(0px); /* 애니메이션이 0%만큼 동작시 */
+  }
+  50% {
+    transform : translateX(50px); /* 애니메이션이 50%만큼 동작시 */
+  }
+  100% {
+    transform : translatey(50px); /* 애니메이션이 100%만큼 동작시 */
+  }
+}
+
+/* 3) keyframes-animation속성  */
+{
+  animation-name : mynaming2;
+  animation-duration : 1s;
+  animation-timing-function : linear; /*동작속도(transition 강의참고)*/
+  animation-delay : 1s; /*시작 전 딜레이*/
+  animation-iteration-count : infinite; /*몇회 반복할것인가*/
+  animation-play-state : paused;  /*애니메이션을 멈추고 싶은 경우 자바스크립트로 이거 조정*/
+  animation-fill-mode: forwards;  /*애니메이션 끝난 후에 원상복구 하지말고 정지*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
