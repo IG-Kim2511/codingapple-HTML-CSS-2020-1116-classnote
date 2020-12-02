@@ -83,8 +83,8 @@ $메인색상 : #2a4c6e
   div {
     background-color: orange;
   }
-  h3 {
-    background-color: green;
+  h1 {
+    background-color: lightcoral;
   }
 }
 
@@ -110,14 +110,16 @@ $메인색상 : #2a4c6e
   background-color: $param2;
 }
 
-h2 {
-  @include ig(1.5rem, red);
-}
-h3 {
-  @include ig(1rem, blue);
-}
-h4 {
-  @include ig(0.5rem, green);
+.c40 {
+  h2 {
+    @include ig(3rem, red);
+  }
+  h3 {
+    @include ig(2rem, blue);
+  }
+  h4 {
+    @include ig(1rem, green);
+  }
 }
 
 // 🦄41 Sass 3편 : sass+bootstrap실습
