@@ -1,4 +1,6 @@
 /* ● */
+body{max-width: 1000px;}
+
 .title {
   background: lightgreen;
 }
@@ -1370,7 +1372,7 @@ text-align: center;
 }
 
 
-/* 🦄45 Grid (레이아웃 만들기 4 : 미래지향적 레이아웃) */
+/* 🦄45 grid (레이아웃 만들기 4 : 미래지향적 레이아웃) */
 
 
 .grid-container45{
@@ -1424,7 +1426,7 @@ text-align: center;
 }
 
 
-/* 🦄46 레이아웃 만들기4 숙제: 인스타그램 격자 레이아웃 */
+/* 🦄46 grid(레이아웃 만들기 4 숙제:)  */
 
 .grid-container46{
   display: grid; 
@@ -1500,9 +1502,24 @@ text-align: center;
 }
 }
 
+/* 🦄47 Position : sticky 활용하기 */
+/* ⚾ position : sticky는 
+1. 스크롤을 할 만한 높이의 부모 박스가 있어야하고 
+2. top 등 좌표속성과 함께 써야 제대로 보입니다.  */
 
-
-
+.c47 .parents47{
+  background: lightslategrey;
+  height: 100vh; /* 1) */
+}
+.parents47 h4{
+  float: left;
+}
+.sticky47{
+  position: sticky;
+  top: 100px; /* 2)  */
+  
+  float: right;
+}
 
 
 
