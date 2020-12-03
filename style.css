@@ -7,6 +7,42 @@ body {
   background: lightgreen;
 }
 
+/* 🦄03 image 가운데 정렬.text 가운데 정렬.font-weight (기본적인 웹페이지스타일링)  */
+
+/* 1) ⚾image 가운데 정렬 공식: 
+ display: block;
+ margin: auto;  */
+
+ .center03{
+  display: block; 
+  margin: auto;
+ }
+
+ /* 2) */
+ .font03{
+ font-size: 26px; 
+ font-family: 'Courier New';
+ }
+
+ /* 3) ⚾text 가운데 정렬 :  text-align: center  */
+.center03-2{
+  font-size: 25px; 
+  text-align: center;
+}
+
+/* 🦄04 css peek , 셀렉터의 우선순위 */
+
+/* css peek : css클래스 연동 ctrl + click */
+
+/*  
+셀렉터의 우선순위 : 
+style=”” / 1000점 
+#id / 100점 
+.class / 10점 
+p / 1점 
+*/
+
+
 /* 🦄05 margin auto 가운데정렬 (네모네모 박스 디자인) */
 
 /*⚾(1) 박스 가운데 정렬  공식
