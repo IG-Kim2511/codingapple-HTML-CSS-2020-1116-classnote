@@ -1,5 +1,7 @@
 /* ● */
-body{max-width: 1000px;}
+body {
+  max-width: 1000px;
+}
 
 .title {
   background: lightgreen;
@@ -1272,7 +1274,7 @@ clear:both
 }
 
 /* 3) keyframes-animation속성  */
- .속성{
+.속성 {
   animation-name: mynaming2;
   animation-duration: 1s;
   animation-timing-function: linear; /*동작속도(transition 강의참고)*/
@@ -1282,36 +1284,41 @@ clear:both
   animation-fill-mode: forwards; /*애니메이션 끝난 후에 원상복구 하지말고 정지*/
 }
 
-
 /*🦄44 transform & animation 숙제: 움직이는 메뉴 UI */
 
-.basic44{
+.basic44 {
   padding: 20px;
   font-size: 22px;
   background: skyblue;
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'nanumsquare';
+  font-family: "nanumsquare";
   margin: auto;
   display: block;
   margin-top: 150px;
 }
 
 /* 1) 흔들리는 버튼 */
-.btn44:hover{
+.btn44:hover {
   animation-name: mynaming44;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
-@keyframes mynaming44{
-  0%{transform: rotate(0deg);}
-  25%{transform: rotate(-8deg);}
-  75%{transform: rotate(8deg);}
+@keyframes mynaming44 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-8deg);
+  }
+  75% {
+    transform: rotate(8deg);
+  }
 }
 
-.basic44-2{
+.basic44-2 {
   margin: 150px auto;
   text-align: center;
   font-size: 70px;
@@ -1320,21 +1327,27 @@ clear:both
 }
 
 /* 2) x돌아서 +되기 */
-.x44:hover{
-animation-name: mynaming44-2;
-animation-duration: 1s;
-animation-fill-mode: forwards;
+.x44:hover {
+  animation-name: mynaming44-2;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-@keyframes mynaming44-2{
-  0%{transform: rotate(0deg);}
-  25%{transform: rotate(-15deg);}
-  100%{transform: rotate(45deg) scale(2);}
+@keyframes mynaming44-2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(45deg) scale(2);
+  }
 }
 
 /* 3) 메뉴에 마우스 올리면 transform */
 
-.basic44-3{
+.basic44-3 {
   width: 300px;
   background-color: black;
   color: white;
@@ -1347,39 +1360,37 @@ animation-fill-mode: forwards;
 }
 
 /* 3)-1 */
-.navbar44{
+.navbar44 {
   transition: all 1s;
   transform: translateX(-250px);
 
   text-align: right;
 }
 
-.navbar44:hover{
-transform: translateX(0px);
+.navbar44:hover {
+  transform: translateX(0px);
 
-text-align: center;
+  text-align: center;
 }
 
 /* 3)-2 */
-.navbar-item44{
+.navbar-item44 {
   transition: all 1s;
   transform: translateX(-400px);
 }
 
 /* navbar에 hover하면, items에 transform */
-.navbar44:hover .navbar-item44{
+.navbar44:hover .navbar-item44 {
   transform: translate(0px);
 }
 
-
 /* 🦄45 grid (레이아웃 만들기 4 : 미래지향적 레이아웃) */
 
-
-.grid-container45{
+.grid-container45 {
   display: grid; /* 1) 부모태그에 display: grid; */
 
-  grid-template-columns: 100px 100px 100px ; /* 2)column, row */
-  grid-template-rows: 100px 100px 100px ;
+  grid-template-columns: 100px 100px 100px; /* 2)column, row */
+  grid-template-rows: 100px 100px 100px;
 
   /*3) fr, % 
   grid-template-columns: 1fr 2fr 1fr 1fr ;
@@ -1390,7 +1401,7 @@ text-align: center;
   padding: 10px;
 }
 
-.grid-container45 div{
+.grid-container45 div {
   border: 1px solid black;
 }
 
@@ -1399,72 +1410,67 @@ text-align: center;
   grid-row: 1/3;
 }
 
-
-.grid-container45-2{
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr  ; /* 2)column, row */
-  grid-template-rows: 1fr 1fr 1fr 1fr ;
-  grid-gap: 10px; 
+.grid-container45-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 2)column, row */
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
   padding: 10px;
 
   grid-template-areas: /* 5) 이름짖고 부모태그에서 grid 배치 */
-  "area1 area1 area1 area1"
-  "area2 area2 . ." 
-  "area2 area2 . ." 
-  
+    "area1 area1 area1 area1"
+    "area2 area2 . ."
+    "area2 area2 . .";
 }
 
-.grid-container45-2 div{
+.grid-container45-2 div {
   border: 1px solid black;
 }
 
-.grid-container45-2 .grid1{
+.grid-container45-2 .grid1 {
   grid-area: area1; /* 5) */
 }
-.grid-container45-2 .grid2{
+.grid-container45-2 .grid2 {
   grid-area: area2; /* 5) */
 }
 
-
 /* 🦄46 grid(레이아웃 만들기 4 숙제:)  */
 
-.grid-container46{
-  display: grid; 
-  grid-template-columns: 1fr 1fr 1fr 1fr;  /* 1-2) */
-  grid-template-rows: 100px 100px 100px  ;
-  grid-gap: 10px; 
+.grid-container46 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 1-2) */
+  grid-template-rows: 100px 100px 100px;
+  grid-gap: 10px;
   padding: 10px;
 
   /* 1) responsive */
   grid-template-areas:
-  "area1 area1 area1 area1"
-  "area2 area3 area3 area3 " 
-  "area2 area3 area3 area3 "   
+    "area1 area1 area1 area1"
+    "area2 area3 area3 area3 "
+    "area2 area3 area3 area3 ";
 }
 
-.grid-container46 div{
+.grid-container46 div {
   border: 1px solid black;
 }
 
-.grid-container46 .grid1{
-  grid-area: area1; 
-
+.grid-container46 .grid1 {
+  grid-area: area1;
 }
-.grid-container46 .grid2{
-  grid-area: area2; 
+.grid-container46 .grid2 {
+  grid-area: area2;
 }
 
-.grid-container46 .grid3{
+.grid-container46 .grid3 {
   grid-area: area3;
 }
 
-@media screen and (max-width:768px){
-
-   /* 1) responsive */
-  .grid-container46{
-    grid-template-areas: 
+@media screen and (max-width: 768px) {
+  /* 1) responsive */
+  .grid-container46 {
+    grid-template-areas:
       "area1 area1 area1 area1"
-      "area2 area2 area2 area2 " 
+      "area2 area2 area2 area2 "
       "area3 area3 area3 area3 ";
 
     grid-template-rows: 100px 100px 500px; /* 1-2) */
@@ -1473,15 +1479,15 @@ text-align: center;
 
 /* 2) */
 .grid-container46-2 {
-  display: grid; 
+  display: grid;
   max-width: 600px;
   margin: auto;
-  grid-template-columns: 1fr 1fr 1fr;/* r */
+  grid-template-columns: 1fr 1fr 1fr; /* r */
   grid-gap: 0px;
   padding: 10px;
 }
 
-.grid-container46-2 div{
+.grid-container46-2 div {
   border: 1px solid blue;
 }
 
@@ -1492,14 +1498,14 @@ text-align: center;
   grid-row: 1/3;
 }
 
-@media screen and (max-width : 768px){
-  .grid-container46-2 {   
-    grid-template-columns: 1fr; 
-}
-.grid-first-img {
-  grid-column: 1/2;
-  grid-row: 1/2;
-}
+@media screen and (max-width: 768px) {
+  .grid-container46-2 {
+    grid-template-columns: 1fr;
+  }
+  .grid-first-img {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
 }
 
 /* 🦄47 Position : sticky 활용하기 */
@@ -1507,69 +1513,32 @@ text-align: center;
 1. 스크롤을 할 만한 높이의 부모 박스가 있어야하고 
 2. top 등 좌표속성과 함께 써야 제대로 보입니다.  */
 
-.c47 .parents47{
+.c47 .parents47 {
   background: lightslategrey;
   height: 100vh; /* 1) */
 }
-.parents47 h4{
+.parents47 h4 {
   float: left;
 }
-.sticky47{
+.sticky47 {
   position: sticky;
   top: 100px; /* 2)  */
-  
+
   float: right;
 }
 
+/*🦄(48)49 Portfolio 실습3: Admin Page(해설편)*/
 
+/* ●
+메뉴 아이템 우측 정렬을 하고 싶다면 
 
+margin-left 를 auto로 주셔도 우측정렬 됩니다
 
+●
+"%" vs "vh" : 
 
+% 단위는 부모의 높이로부터 몇% 차지할건지를 나타내는 단위입니다. 
 
+ 높이 100% !!!! 이러시면,  부모의 높이가 0이면,  얘도 0이 되어 전혀 안보이는겁니다. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+그러니 브라우저 높이의 1%를 의미하는 vh라는 단위를 쓰면 속편합니다. */
