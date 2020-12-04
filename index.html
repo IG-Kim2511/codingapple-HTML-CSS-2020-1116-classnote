@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1116</title>
 
+    <link rel="icon" href="images/etc/spiderman.png">
+
     <link rel="stylesheet" href="style.css" />
 
     <!-- 🦄33  CSS 덮어쓰기 -->
@@ -148,7 +150,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="c08">
       <p class="title">🦄08 float. 박스 안 img 100% 딱 맞추기 (레이아웃 만들기 숙제)</p>
 
       <div class="container8">
@@ -177,7 +179,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="c09">
       <p class="title">🦄09 .class selector{ }.class>selector{ } (셀렉터를 이용해 CSS정리) </p>
       <div>
         <div class="float09_1"></div>
@@ -198,7 +200,7 @@
       </nav>
     </section>
 
-    <section>
+    <section class="c10">
       <p class="title">🦄10 background & margin 버그</p> 
       <div class="background10">
         <p class="text10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, omnis! Asperiores repellat suscipit distinctio, aperiam labore beatae, recusandae vel atque omnis quas hic. Ratione omnis hic, doloremque dolorum modi accusantium.</ㅔ>        
@@ -247,8 +249,8 @@
     <section class="c13">
       <p class="title"> 🦄13 form & input</p>
       <div>
-        input쓸때 form으로 감싸게 약속되어있음
-        action : '전송할 경로': 서버개발자 가 사용함 
+        <!-- input쓸때 form으로 감싸게 약속되어있음
+        action : '전송할 경로': 서버개발자 가 사용함  -->
         <form action="">
           <!-- input 자주 쓰이는 것들-->
 
@@ -313,33 +315,31 @@
             <textarea rows="3"></textarea>
           </div>
 
-          <!--(1) -->
-          for="작명" id="작명": label(글씨)눌러도, input이 선택됨 
+          <!--(1) 
+          for="작명" id="작명": label(글씨)눌러도, input이 선택됨 -->
          
           <div>
             <input type="checkbox" id="작명">
-            <label for="작명">label글씨</label>
+            <label for="작명">label & input</label>
           </div>
-        </form>
 
-        <!-- (3) -->
-        input 필수 속성들 : border, font-size, padding, width
-        <div></div>
+          <!-- 3) -->
+          <input type="text" class="input14">
+        </form>     
       </div>
     </section>
 
     <section class="c15">
       <p class="title"> 🦄15 Table 레이아웃과 vertical-align속성</p>
 
-      <!-- (1)  --> 
+      <!-- (1) 
       table은 div안에 만드는게 좋음 
       table,tbody 반드시 나눠야하는것은 아니지만, css,js추가할때 편함
 
       th: 굵은 글씨 : 제목
-      td: 일반    
+      td: 일반     --> 
 
-      <div>
-        
+      <div>        
         <table>
           <thead>
             <tr>
@@ -361,11 +361,7 @@
 
         <br>
 
-        <!-- (2)   -->
-        border사이의 나쁜간격 없애기
-         border-collapse: collapse;
-        👉table태그에서 필수  
-
+        <!-- (2) -->
         <table class="border-collapse">    
           <tbody>
             <tr>
@@ -376,11 +372,7 @@
         </table>
       </div>
 
-      <!-- (2)-2  -->
-      border-collapse 속성을 table태그에 적용하면 border-radius가 안먹는 경우가 있습니다. 그럴 때 사용할만한 방법들을 소개해드립니다. 
-
-      👉border그림자 만들고, border는 숨김
-
+      <!-- (2)-2 -->
       <table class="border-collapse2">    
         <tbody>
           <tr>
@@ -390,13 +382,7 @@
         </tbody>
       </table>
    
-
-        <!-- (3)-->
-        vertical-align: middle;
-        inline 요소들을 나란히 배치하면 상하정렬이 이상한 경우가 있습니다. 
-        특히 이미지와 글을 나란히 배치했을 때 서로 높이가 맞지 않는 경우가 많은데 ,이럴 때 쓰는 속성입니다. 
-        top, middle, bottom , px단위로 줄 수도 있습니다.  
-
+        <!-- (3)  -->
       <div> 
         <img src="https://mdn.mozillademos.org/files/12245/frame_image.svg" width="55" class="vertical-align"> 
         글씨와 이미지가 같이 있는 예제 vertical-align: middle;
@@ -444,7 +430,7 @@
 
       <br>
       <!-- (1) --> Pseudo-class
-      <button class="btn17 btn-blue">btn</button>
+      <button class="btn17 bt n-blue">btn</button>
 
       <br>
       <!-- (1)-2 --> Pseudo-class for a태그
@@ -461,7 +447,7 @@
     </section>
 
     <section class="c18">
-      <p class="title"> 🦄18 폰트</p>
+      <p class="title"> 🦄18 폰트 @font-face </p>
     </section>
     
     <section class="c19">
@@ -492,7 +478,7 @@
     </section>
 
     <section>
-      <p class="title">🦄22</p>
+      <p class="title">🦄22 em rem vw vh /media query (반응형 레이아웃 만들기)</p>
     </section>
 
     <section>
@@ -527,8 +513,8 @@
       👆head 태그</p>
 
       <br>
-      ⚾익스플로러용 css파일 따로 만들기 / How To Create an IE-Only Stylesheet 
-      https://css-tricks.com/how-to-create-an-ie-only-stylesheet/
+      <!-- ⚾익스플로러용 css파일 따로 만들기 / How To Create an IE-Only Stylesheet 
+      https://css-tricks.com/how-to-create-an-ie-only-stylesheet/ -->
 
     </section>
 
@@ -543,7 +529,7 @@
       <div class="c26-container">      
         <div class="c26-item">
           <div class="relative">
-            <!--  (2)--> (2) hover하면 이미지 덮을 div 
+            <!--  (2) hover하면 이미지 덮을 div--> 
             <div class="overlay"></div>
             <!-- (1)-2 -->
             <img src="images/etc/spiderman.jpg">
@@ -679,7 +665,7 @@
       <p class="title">🦄30 Bootstrap 설치와 사용법
       👆head태그 확인</p>
 
-      <div>     
+        <!--
         안정성있는 설치방법 
 
         https://getbootstrap.com/docs/4.3/getting-started/download/ 
@@ -692,9 +678,9 @@
 
         사이트에 방문하여 우클릭 – 다른이름으로 저장 해주세요. 
 
-        그리고 여러분의 HTML 파일 내에 다운받은 세개의 파일을 첨부합니다. 
-       </div>
-
+        그리고 여러분의 HTML 파일 내에 다운받은 세개의 파일을 첨부합니다.  
+      -->
+ 
       <div> bootstrap예제
         <button type="button" class="btn btn-primary">Primary</button>
         <button type="button" class="btn btn-secondary">Secondary</button>
@@ -703,22 +689,24 @@
       </div>
 
         <br>      
-        <!-- (2) --> class이용해서 내가만든css추가 가능함
+        <!-- (2)  class이용해서 내가만든css추가 가능함-->
         <button type="button" class="btn btn-danger mycss">mycss</button>
      </section>
 
      <section class="c31">
       <p class="title">🦄31 Bootstrap Grid </p>
 
-      <!-- (1) -->
+      <!-- (1) 
       부모div class : row
       자식 div class : col      
-      넣으면 적용됨
-      <!-- (2) -->
+      넣으면 적용됨-->
+
+      <!-- (2)
       총합 12 column안에서 비율 조정
-      총합 12 column 넘어가면 다음줄로 넘어감
-      <!-- (3) -->
-      반응형클래스 이름 : md
+      총합 12 column 넘어가면 다음줄로 넘어감 -->
+
+      <!-- (3) 
+      반응형클래스 이름 : md-->
 
       <div class="row">
         <div class="col-4 mycss"> row - col </div>
@@ -745,9 +733,9 @@
      </section>
 
      <section class="c33">
-       <p class="title"> 🦄33 CSS 덮어쓰기 잘하는 법+ Specificity 점수
-         👻캡쳐필기정리 
-        👆덮어쓰기용 css파일 맨밑에 첨부 </p>
+       <p class="title"> 🦄33 CSS 덮어쓰기 잘하는 법+ Specificity 점수 </p>
+       <!-- 👻캡쳐필기정리 
+        👆덮어쓰기용 css파일 맨밑에 첨부 -->
 
        <div class="box33">style33.css</div>     
      </section>
