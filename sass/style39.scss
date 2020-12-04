@@ -16,7 +16,63 @@ compile하는법
 */
 
 /* 
-⚾node.js-scss설치방식 (node.js-npm install)
+⚾node.js-scss설치방식1 (node.js-npm install)
+
+●
+설치여부 확인법 : version확인
+node -v
+npm -v
+$ node-sass -v
+
+npm list -g
+
+
+●
+SASS 가 설치되는 폴더에서만 작동 :
+$ npm install node-sass  
+
+-g :global 설치를 말합니다. 어느 폴더에서도 SASS 가 작동되게 설치를 하는거죠. :
+$ npm install -g node-sass 
+
+(오류발생 시, 
+$ npm rebuild node-sass를 쳐보자)
+
+sudo npm install --unsafe-perm -g node-sass
+
+watch, input folder, output folder
+$ node-sass -w scss/style.scss css/style.css 
+
+watch, input folder, output folder , output스타일 expanded
+$ node-sass  --watch  scss/main.scss scss/main.css --output-style expanded
+
+
+●scss
+
+ 고맙게도 어느 개발자 분 (이름이 Tyler Reckart 입니다) 이 자신의 compile build 를 여기에 공개하셨습니다.
+
+https://www.npmjs.com/package/scss-compile
+
+이분의 build 를 사용하신다면 다시 command prompt 에서
+
+
+npm install -g scss-compile
+
+위 명령어를 내리시면 SCSS 컴파일러가 설치됩니다.
+
+일단 하셔야 하는 작업은 설치 후, 이분의 package.json 파일을 여세요
+
+이 명령문을 제 폴더 형식에 맞겠금 바꿔줘야 합니다.
+
+“scss-compile”: “node-sass -rw asset/scss -o asset/css”,
+
+
+css 로 컴파일 하라는 명령실행은
+
+npm run scss-compile
+*/
+
+/* 
+⚾node.js-scss설치방식2 (node.js-npm install)
 
 1.
 $ npm install -g npm@latest
